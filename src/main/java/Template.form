@@ -54,7 +54,6 @@
           <horizontalTextPosition value="10"/>
           <icon value="icons/plus.png"/>
           <iconTextGap value="5"/>
-          <pressedIcon value="icons/icons8-plus-windows-11-outline/Android/icons8-plus-18(-ldpi).png"/>
           <text value="Add Apartment"/>
         </properties>
       </component>
