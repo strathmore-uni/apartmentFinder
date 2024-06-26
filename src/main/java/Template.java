@@ -1,3 +1,5 @@
+//import com.apartmentFinder.components.ShadowPanel;
+
 import javax.swing.*;
 
 public class Template {
@@ -8,6 +10,7 @@ public class Template {
     private JLabel subtitle;
     private JComboBox comboBox1;
     private JButton button1;
+    private JButton viewButton;
 
     public JPanel getMainPanel() {
         return mainPanel;
