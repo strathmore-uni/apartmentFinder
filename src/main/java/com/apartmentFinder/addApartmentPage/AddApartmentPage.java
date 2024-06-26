@@ -1,14 +1,14 @@
-package com.apartmentFinder.LoginPage;
+package com.apartmentFinder.addApartmentPage;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class LoginPage {
+public class AddApartmentPage {
     private Container container;
     private CardLayout cardLayout;
     private JPanel mainPanel;
 
-    public LoginPage(Container container, CardLayout cardLayout){
+    public AddApartmentPage(Container container, CardLayout cardLayout){
         this.container = container;
         this.cardLayout = cardLayout;
     }
