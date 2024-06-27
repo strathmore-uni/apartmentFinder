@@ -1,12 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.apartmentFinder.LoginPage.LoginPage">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="1111" height="543"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-13158601"/>
+      <foreground color="-2501420"/>
+    </properties>
     <border type="none"/>
-    <children/>
+    <children>
+      <grid id="ac8c9" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="14" left="18" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13158601"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="6984d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Inter" size="40" style="1"/>
+              <foreground color="-2501420"/>
+              <text value="Apartment Finder."/>
+            </properties>
+          </component>
+          <hspacer id="9d007">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+      <grid id="67b28" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="129" left="333" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13158601"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="8cf23" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="593" height="40"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8224126"/>
+              <enabled value="false"/>
+              <font name="Inter" size="40" style="0"/>
+              <foreground color="-8224126"/>
+              <text value="Log In to Add an Apartment Listing"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="a74d1" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="70" left="390" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13158601"/>
+          <font style="0"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="13949" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-8224126"/>
+              <font name="Inter" size="26" style="0"/>
+              <foreground color="-8224126"/>
+              <text value="Phone Number"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="5e0cc" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="11" left="378" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13158601"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="a751b" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13158601"/>
+            </properties>
+            <border type="none">
+              <color color="-2501420"/>
+            </border>
+            <children>
+              <component id="9712d" class="javax.swing.JTextField" binding="EnterPhoneNumber">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="5" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="427" height="91"/>
+                    <preferred-size width="427" height="91"/>
+                    <maximum-size width="427" height="91"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-13158601"/>
+                  <caretColor color="-13947600"/>
+                  <columns value="0"/>
+                  <editable value="true"/>
+                  <enabled value="true"/>
+                  <font name="Inter" size="26" style="0"/>
+                  <foreground color="-8224126"/>
+                  <horizontalAlignment value="10"/>
+                  <opaque value="false"/>
+                  <selectedTextColor color="-8224126"/>
+                  <selectionColor color="-13947600"/>
+                  <text value="e.g 0712345678"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="1a625" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="6" left="32" bottom="10" right="244"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13158601"/>
+            </properties>
+            <border type="none">
+              <font/>
+              <title-color color="-2104859"/>
+            </border>
+            <children>
+              <component id="2873a" class="javax.swing.JButton" binding="button1" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="161" height="80"/>
+                    <preferred-size width="161" height="80"/>
+                    <maximum-size width="161" height="80"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-8224126"/>
+                  <borderPainted value="false"/>
+                  <foreground color="-16777216"/>
+                  <icon value="icons/login.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <vspacer id="6be94">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+    </children>
   </grid>
 </form>
