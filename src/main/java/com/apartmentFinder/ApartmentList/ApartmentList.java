@@ -10,7 +10,7 @@ public class ApartmentList {
     private JLabel title;
     private JTextField searchALocation;
     private JComboBox comboBox1;
-    private JButton addApartmentButton;
+    private JButton button1;
 
     public ApartmentList(Container container, CardLayout cardLayout){
         this.container = container;
