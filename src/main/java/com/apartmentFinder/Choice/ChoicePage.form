@@ -35,7 +35,7 @@
           <text value="Apartment Finder."/>
         </properties>
       </component>
-      <component id="ecfa9" class="javax.swing.JButton" binding="button1" default-binding="true">
+      <component id="ecfa9" class="javax.swing.JButton" binding="searchForApartment">
         <constraints>
           <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <minimum-size width="100" height="60"/>
