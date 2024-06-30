@@ -52,7 +52,7 @@
           <verticalAlignment value="0"/>
         </properties>
       </component>
-      <component id="29070" class="javax.swing.JTextField" binding="searchALocation">
+      <component id="29070" class="javax.swing.JTextField" binding="location">
         <constraints>
           <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="5" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="300" height="50"/>
@@ -71,25 +71,7 @@
           <text value="Search for a location"/>
         </properties>
       </component>
-      <component id="f856b" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
-        <constraints>
-          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="278" height="50"/>
-            <preferred-size width="278" height="50"/>
-            <maximum-size width="278" height="50"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-8224126"/>
-          <foreground color="-855310"/>
-          <model>
-            <item value="Min. Price"/>
-            <item value="10000"/>
-            <item value="20000"/>
-          </model>
-        </properties>
-      </component>
-      <component id="5a1f7" class="javax.swing.JComboBox" default-binding="true">
+      <component id="5a1f7" class="javax.swing.JComboBox" binding="min_price_combo_box">
         <constraints>
           <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="278" height="50"/>
@@ -152,12 +134,32 @@
           <grid row="6" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <enabled value="true"/>
           <font size="25"/>
           <foreground color="-8224126"/>
           <horizontalAlignment value="10"/>
           <horizontalTextPosition value="10"/>
           <icon value="icons/dropdown.png"/>
           <text value="Advanced Filters"/>
+          <visible value="false"/>
+        </properties>
+      </component>
+      <component id="f856b" class="javax.swing.JComboBox" binding="max_price_combo_box">
+        <constraints>
+          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="278" height="50"/>
+            <preferred-size width="278" height="50"/>
+            <maximum-size width="278" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-8224126"/>
+          <foreground color="-855310"/>
+          <model>
+            <item value="Max. Price"/>
+            <item value="10000"/>
+            <item value="20000"/>
+          </model>
         </properties>
       </component>
     </children>
