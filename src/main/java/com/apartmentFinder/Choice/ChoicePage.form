@@ -84,6 +84,7 @@
           <foreground color="-855310"/>
           <model>
             <item value="Min. Price"/>
+            <item value="0"/>
             <item value="10000"/>
             <item value="20000"/>
           </model>
