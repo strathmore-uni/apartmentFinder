@@ -1,6 +1,8 @@
 package com.apartmentFinder.Choice;
 
+import com.apartmentFinder.ApartmentList.ApartmentList;
 import com.apartmentFinder.components.utils.InputFieldFocusListener;
+import com.apartmentFinder.components.utils.SearchData;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -80,6 +82,13 @@ public class ChoicePage{
         System.out.println("Location : "+location_value);
         System.out.println("Min Price : "+min_price);
         System.out.println("Max Price : "+max_price);
+
+        // Create a SearchData object
+        SearchData searchData = new SearchData(location_value, min_price, max_price);
+
+        // Pass the data to the apartmentListPage
+        ApartmentList apartmentListPage = new ApartmentList(container,cardLayout);
+        apartmentListPage.fetchSearchData(searchData);
 
 //        cardLayout.show(container,"apartmentListPage");
     }
