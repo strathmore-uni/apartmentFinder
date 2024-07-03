@@ -1,12 +1,426 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.apartmentFinder.landlordDashboard.LandlordDashboard">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="1206" height="653"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-13158601"/>
+      <foreground color="-2501420"/>
+      <visible value="true"/>
+    </properties>
     <border type="none"/>
-    <children/>
+    <children>
+      <grid id="30954" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13158601"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="bd8ee" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="1" left="18" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13158601"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="e67de" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Inter" size="40" style="1"/>
+                  <foreground color="-2501420"/>
+                  <text value="Apartment Finder."/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="33d74" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="15" left="80" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13158601"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="a7e86" class="javax.swing.JButton" binding="addApartmentButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="277" height="73"/>
+                    <preferred-size width="277" height="73"/>
+                    <maximum-size width="277" height="73"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-8224126"/>
+                  <borderPainted value="false"/>
+                  <font name="Inter" size="24" style="0"/>
+                  <foreground color="-2501420"/>
+                  <text value="Add Apartment"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="33540" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="24" left="17" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-13158601"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="a24a8" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-8224126"/>
+                  <font name="Inter" size="24" style="0"/>
+                  <foreground color="-8224126"/>
+                  <text value="Welcome Freddie."/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="37ecb" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="67" left="60" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13158601"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="8576b" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Inter" size="24" style="0"/>
+              <foreground color="-2501420"/>
+              <text value="Properties"/>
+            </properties>
+          </component>
+          <hspacer id="f2439">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+      <grid id="27776" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="40" left="38" bottom="0" right="90"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13158601"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="a4b2a" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="237" height="45"/>
+                <preferred-size width="237" height="45"/>
+                <maximum-size width="237" height="45"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8224126"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="7efd1" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Inter" size="24" style="1"/>
+                  <foreground color="-2501420"/>
+                  <inheritsPopupMenu value="true"/>
+                  <opaque value="false"/>
+                  <text value="Cover"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="4b6b6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="237" height="45"/>
+                <preferred-size width="237" height="45"/>
+                <maximum-size width="237" height="45"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8224126"/>
+              <font name="Inter" size="24"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="eccc7" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Inter" size="24" style="1"/>
+                  <foreground color="-2501420"/>
+                  <text value="Property Name"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="29821" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="237" height="45"/>
+                <preferred-size width="237" height="45"/>
+                <maximum-size width="237" height="45"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8224126"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="b2941" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Inter" size="24" style="1"/>
+                  <foreground color="-2501420"/>
+                  <text value="Units"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="88228" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <minimum-size width="237" height="45"/>
+                <preferred-size width="237" height="45"/>
+                <maximum-size width="237" height="45"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-8224126"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="3c586" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-8224126"/>
+                  <font name="Inter" size="24" style="1"/>
+                  <foreground color="-2501420"/>
+                  <text value="Contact"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <vspacer id="c1ce8">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <scrollpane id="cae37">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-13158601"/>
+          <foreground color="-13158601"/>
+          <horizontalScrollBarPolicy value="31"/>
+          <opaque value="true"/>
+          <verticalScrollBarPolicy value="20"/>
+          <visible value="true"/>
+          <wheelScrollingEnabled value="true"/>
+        </properties>
+        <border type="empty"/>
+        <children>
+          <grid id="4265e" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints/>
+            <properties>
+              <background color="-13158601"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="31efb" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-13158601"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="f97ac" class="javax.swing.JButton" binding="button2" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="40" height="40"/>
+                        <preferred-size width="40" height="40"/>
+                        <maximum-size width="40" height="40"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-13158601"/>
+                      <borderPainted value="false"/>
+                      <icon value="icons/Trash@2x.png"/>
+                      <label value=""/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="580b2" class="javax.swing.JButton" binding="button1" default-binding="true">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="40" height="40"/>
+                        <preferred-size width="40" height="40"/>
+                        <maximum-size width="40" height="40"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-13158601"/>
+                      <borderPainted value="false"/>
+                      <icon value="icons/Edit_duotone@3x.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="82c57" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="49" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-13158601"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="9f519" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Inter" size="24" style="0"/>
+                      <foreground color="-1"/>
+                      <text value="0712345678"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="8c082" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-13158601"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="d81fd" class="javax.swing.JComboBox" binding="Units">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="252" height="82"/>
+                        <preferred-size width="252" height="82"/>
+                        <maximum-size width="252" height="82"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-8224126"/>
+                      <font name="Inter" size="24"/>
+                      <foreground color="-1"/>
+                      <lightWeightPopupEnabled value="false"/>
+                      <model/>
+                      <name value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="b2d80" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="48" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="10" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-13158601"/>
+                  <font name="Inter" size="24"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="5b70f" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Inter" size="24" style="0"/>
+                      <foreground color="-1"/>
+                      <text value="Example Apartments"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="98b02" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="55" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <autoscrolls value="true"/>
+                  <background color="-13158601"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="938b7" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <autoscrolls value="false"/>
+                      <doubleBuffered value="false"/>
+                      <enabled value="true"/>
+                      <icon value="icons/image 8.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </scrollpane>
+    </children>
   </grid>
 </form>
