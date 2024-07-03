@@ -15,21 +15,27 @@ public class LoginPage {
     public LoginPage(Container container, CardLayout cardLayout){
         this.container = container;
         this.cardLayout = cardLayout;
-        EnterPhoneNumber.addFocusListener(new FocusAdapter() {
-            @Override
-            public void focusGained(FocusEvent e) {
-                if (EnterPhoneNumber.getText().equals("e.g 0712345678")) {
-                    EnterPhoneNumber.setText("");
-                }
-            }
-            @Override
-            public void focusLost(FocusEvent e) {
-                if (EnterPhoneNumber.getText().isEmpty()) {
-                    EnterPhoneNumber.setText("e.g 0712345678");
-                }
-            }
-        });
+
+        placeholderText();
+
     }
+    private void placeholderText(){
+        EnterPhoneNumber.addFocusListener(new FocusAdapter() {
+
+        @Override
+        public void focusGained(FocusEvent e) {
+            if (EnterPhoneNumber.getText().equals("e.g 0712345678")) {
+                EnterPhoneNumber.setText("");
+            }
+        }
+        @Override
+        public void focusLost(FocusEvent e) {
+            if (EnterPhoneNumber.getText().isEmpty()) {
+                EnterPhoneNumber.setText("e.g 0712345678");
+            }
+        }
+    });}
+
 
     public JPanel createMainPanel(){
         return mainPanel;
