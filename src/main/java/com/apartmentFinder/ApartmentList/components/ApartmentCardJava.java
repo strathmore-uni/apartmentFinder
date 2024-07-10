@@ -184,30 +184,30 @@ public class ApartmentCardJava {
     }
 
 //    Main function
-public static void main(String[] args) {
-    JFrame frame = new JFrame("ApartmentCardJava");
-    // Create 5 cards - Gap between the cards, 4 cards each row. Create a list of data to populate the cards
-    ApartmentCardJava[] cards = new ApartmentCardJava[10];
-    for (int i = 0; i < 10; i++) {
-        cards[i] = new ApartmentCardJava();
-    }
-    // Create a panel to hold the cards
-    JPanel panel = new JPanel();
-    panel.setLayout(new GridLayout(0, 4, 10, 10));
-    panel.setBackground(new Color(-13158601));
-    for (int i = 0; i < 10; i++) {
-        panel.add(cards[i].getMainPanel());
-    }
-    // Create a scroll pane to hold the panel
-    JScrollPane scrollPane = new JScrollPane(panel);
-    scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-    scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-    frame.setContentPane(scrollPane);
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.pack();
-    frame.setVisible(true);
-
-}
+//public static void main(String[] args) {
+//    JFrame frame = new JFrame("ApartmentCardJava");
+//    // Create 5 cards - Gap between the cards, 4 cards each row. Create a list of data to populate the cards
+//    ApartmentCardJava[] cards = new ApartmentCardJava[10];
+//    for (int i = 0; i < 10; i++) {
+//        cards[i] = new ApartmentCardJava();
+//    }
+//    // Create a panel to hold the cards
+//    JPanel panel = new JPanel();
+//    panel.setLayout(new GridLayout(0, 4, 10, 10));
+//    panel.setBackground(new Color(-13158601));
+//    for (int i = 0; i < 10; i++) {
+//        panel.add(cards[i].getMainPanel());
+//    }
+//    // Create a scroll pane to hold the panel
+//    JScrollPane scrollPane = new JScrollPane(panel);
+//    scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+//    scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+//    frame.setContentPane(scrollPane);
+//    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    frame.pack();
+//    frame.setVisible(true);
+//
+//}
     public void setLocation_label(String locationDescription) {
         location_label.setText(locationDescription);
     }
