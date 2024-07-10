@@ -46,12 +46,13 @@ public class ApartmentFinder extends JFrame  {
 
         // Set the first page to display - choicePage
         cardLayout.show(container,"choicePage");
-//        cardLayout.show(container,"apartmentListPage");
+        // cardLayout.show(container,"apartmentListPage");
         // Template Page
         //        cardLayout.show(container,"templatePage");
         setContentPane(container);
 
-        setSize(900,600);
+        setSize(1400,600);
+        // Set the image in the middle of the screen
         Dimension dim=Toolkit.getDefaultToolkit().getScreenSize(); this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 

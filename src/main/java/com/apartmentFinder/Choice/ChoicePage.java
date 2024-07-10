@@ -88,7 +88,7 @@ public class ChoicePage{
 
         // Pass the data to the apartmentListPage
         ApartmentList apartmentListPage = new ApartmentList(container,cardLayout);
-        apartmentListPage.fetchSearchData(searchData);
+        apartmentListPage.fetchAndFilterFromTheDB(location_value,min_price,max_price);
 
 //        cardLayout.show(container,"apartmentListPage");
     }
