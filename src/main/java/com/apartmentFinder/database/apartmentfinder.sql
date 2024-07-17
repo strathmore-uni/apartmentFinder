@@ -59,8 +59,8 @@ CREATE TABLE `landlords` (
 --
 
 INSERT INTO `landlords` (`id`, `name`, `phone`, `email`) VALUES
-(1, 'John Doe', '123-456-7890', 'john@example.com'),
-(2, 'Jane Smith', '098-765-4321', 'jane@example.com');
+(1, 'John Doe', '0712345678', 'john@example.com'),
+(2, 'Jane Smith', '0787654321', 'jane@example.com');
 
 -- --------------------------------------------------------
 

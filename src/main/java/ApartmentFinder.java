@@ -48,7 +48,7 @@ public class ApartmentFinder extends JFrame  {
         cardLayout.show(container,"choicePage");
         // cardLayout.show(container,"apartmentListPage");
         // Template Page
-        //        cardLayout.show(container,"templatePage");
+        //cardLayout.show(container,"templatePage");
         setContentPane(container);
 
         setSize(1400,600);
