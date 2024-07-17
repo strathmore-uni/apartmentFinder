@@ -76,4 +76,21 @@ public class DBConnector {
 
         return apartmentsList;
     }
+    public String userName;
+    public boolean checkUserForLogin(String number){
+        boolean exists = false;
+        try {
+            String query="SELECT COUNT(*) FROM landlords WHERE phone = ? ";
+            PreparedStatement preparedStatement=conn.prepareStatement(query);
+            preparedStatement.setString(1, number);
+            try(ResultSet resultSet =preparedStatement.executeQuery()){
+                if (resultSet.next() && resultSet.getInt(1)>0){
+                    exists=true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return exists;
+    }
 }
