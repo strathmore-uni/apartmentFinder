@@ -31,7 +31,7 @@ public class ApartmentFinder extends JFrame  {
         // 5. Login Page
         LoginPage loginPage = new LoginPage(container, cardLayout);
         // 6. Specific Apartment Page
-        SpecificApartment specificApartmentPage = new SpecificApartment(container, cardLayout);
+//        SpecificApartment specificApartmentPage = new SpecificApartment(container, cardLayout);
         // Dev Page
         Template template = new Template(container, cardLayout);
 
@@ -40,7 +40,7 @@ public class ApartmentFinder extends JFrame  {
         container.add("choicePage",choicePage.createMainPanel());
         container.add("landlordDashboardPage",landlordDashboard.createMainPanel());
         container.add("loginPage",loginPage.createMainPanel());
-        container.add("specificApartmentPage",specificApartmentPage.createMainPanel());
+//        container.add("specificApartmentPage",specificApartmentPage.createMainPanel());
         // Template Page For Dev Purposes
         container.add("templatePage",template.getMainPanel());
 
