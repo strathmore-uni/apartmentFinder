@@ -1,9 +1,13 @@
 package com.apartmentFinder.ApartmentList.components;
 
+import com.apartmentFinder.SpecificApartment.SpecificApartment;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ApartmentCardJava {
+public class ApartmentCardJava implements ActionListener {
     private JPanel mainPanel;
     private JPanel card;
     private JLabel card_image;
@@ -22,8 +26,14 @@ public class ApartmentCardJava {
     private JLabel price_number;
     private JLabel price_duration;
     private JLabel location_label;
+    private CardLayout cardLayout;
+    private Container container;
+    private int apartmentID;
+    private int unitID;
 
-    public ApartmentCardJava() {
+    public ApartmentCardJava(Container container, CardLayout cardLayout) {
+        this.cardLayout = cardLayout;
+        this.container = container;
         // Main Panel
         mainPanel = new JPanel();
         mainPanel.setLayout(new BorderLayout());
@@ -60,6 +70,7 @@ public class ApartmentCardJava {
         view_button.setFont(new Font("Default", Font.PLAIN, 20));
         view_button.setForeground(new Color(-855310));
         view_button.setIcon(new ImageIcon(getClass().getResource("/icons/view.png")));
+        view_button.addActionListener(this);
         GridBagConstraints gbc_view_button = new GridBagConstraints();
         gbc_view_button.gridx = 1;
         gbc_view_button.gridy = 3;
@@ -220,8 +231,30 @@ public class ApartmentCardJava {
     public void setPrice_number(String price) {
         price_number.setText(price);
 }
+
+    //Apartment and Unit ID - To be passed to the specific apartment page
+    public void setApartmentID(int apartmentID) {
+        this.apartmentID = apartmentID;
+    }
+
+    public void setUnitID(int unitID) {
+        this.unitID = unitID;
+    }
     public JPanel getMainPanel() {
         return mainPanel;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == view_button){
+            //Pass the apartmentID and unitID to the specific apartment page
+            //Add instance of specificApartmentPage to the card stack here - Inefficient but, yeah!
+            SpecificApartment specificApartmentPage = new SpecificApartment(container,cardLayout,apartmentID,unitID);
+            //Add the specificApartmentPage to the container
+            container.add("specificApartmentPage",specificApartmentPage.createMainPanel());
+            //Go to specific apartment page
+            cardLayout.show(container,"specificApartmentPage");
+        }
     }
 }
 

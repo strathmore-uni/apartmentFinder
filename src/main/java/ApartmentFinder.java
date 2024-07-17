@@ -31,7 +31,7 @@ public class ApartmentFinder extends JFrame  {
         // 5. Login Page
         LoginPage loginPage = new LoginPage(container, cardLayout);
         // 6. Specific Apartment Page
-        SpecificApartment specificApartmentPage = new SpecificApartment(container, cardLayout);
+//        SpecificApartment specificApartmentPage = new SpecificApartment(container, cardLayout);
         // Dev Page
         Template template = new Template(container, cardLayout);
 
@@ -40,19 +40,19 @@ public class ApartmentFinder extends JFrame  {
         container.add("choicePage",choicePage.createMainPanel());
         container.add("landlordDashboardPage",landlordDashboard.createMainPanel());
         container.add("loginPage",loginPage.createMainPanel());
-        container.add("specificApartmentPage",specificApartmentPage.createMainPanel());
+//        container.add("specificApartmentPage",specificApartmentPage.createMainPanel());
         // Template Page For Dev Purposes
         container.add("templatePage",template.getMainPanel());
 
         // Set the first page to display - choicePage
-
-        cardLayout.show(container,"loginPage");
-//        cardLayout.show(container,"apartmentListPage");
+        cardLayout.show(container,"choicePage");
+        // cardLayout.show(container,"apartmentListPage");
         // Template Page
-        //        cardLayout.show(container,"templatePage");
+        //cardLayout.show(container,"templatePage");
         setContentPane(container);
 
-        setSize(900,600);
+        setSize(1400,600);
+        // Set the image in the middle of the screen
         Dimension dim=Toolkit.getDefaultToolkit().getScreenSize(); this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
