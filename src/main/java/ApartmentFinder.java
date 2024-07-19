@@ -28,7 +28,6 @@ public class ApartmentFinder extends JFrame  {
 
         // 3. Login Page
         LoginPage loginPage = new LoginPage(container, cardLayout);
-
         // Dev Page - Template for the components used in the project
         Template template = new Template(container, cardLayout);
 
@@ -37,10 +36,9 @@ public class ApartmentFinder extends JFrame  {
         container.add("loginPage",loginPage.createMainPanel());
         // Template Page For Dev Purposes
         container.add("templatePage",template.getMainPanel());
-
         // Set the first page to display - choicePage
 
-        cardLayout.show(container,"choicePage");
+        cardLayout.show(container,"loginPage");
         // Template Page - Uncomment to see the template page
         //cardLayout.show(container,"templatePage");
         setContentPane(container);

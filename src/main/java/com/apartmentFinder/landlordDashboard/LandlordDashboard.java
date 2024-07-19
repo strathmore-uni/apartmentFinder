@@ -27,14 +27,15 @@ public class LandlordDashboard extends JFrame{
 
 //    public LandlordDashboard(Container container, CardLayout cardLayout){
 //
-//        this.container = container;
-//        this.cardLayout = cardLayout;
+//
 //    }
-    public LandlordDashboard(String userNumber){
-        super("Landlord Dashboard");
-        setExtendedState(LandlordDashboard.MAXIMIZED_BOTH);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setContentPane(mainPanel);
+    public LandlordDashboard(Container container, CardLayout cardLayout,String userNumber){
+        this.container = container;
+        this.cardLayout = cardLayout;
+//        super("Landlord Dashboard");
+//        setExtendedState(LandlordDashboard.MAXIMIZED_BOTH);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setContentPane(mainPanel);
 
 
 
@@ -171,7 +172,7 @@ public class LandlordDashboard extends JFrame{
         addApartmentButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                cardLayout.show(container,"addApartmentPage");
+                cardLayout.show(container,"addApartmentPage");
             }
         });
     }

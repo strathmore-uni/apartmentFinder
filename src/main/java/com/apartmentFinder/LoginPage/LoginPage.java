@@ -51,11 +51,9 @@ public class LoginPage extends JFrame{
                 String verifyNumber=EnterPhoneNumber.getText();
                 if(dbConnector.checkUserForLogin(verifyNumber)){
                     JOptionPane.showMessageDialog(null, "Welcome "+dbConnector.getUserName(verifyNumber));
-//                    cardLayout.show(container,"landlordDashboardPage");
-                    LandlordDashboard LD=new LandlordDashboard(verifyNumber);
-                    LD.getContentPane();
-                    LD.setVisible(true);
-                    dispose();
+                    LandlordDashboard landlordDashboard=new LandlordDashboard(container,cardLayout,verifyNumber);
+                    container.add("landlordDashboard",landlordDashboard.createMainPanel());
+                    cardLayout.show(container,"landlordDashboard");
                 }
                 else {
                     JOptionPane.showMessageDialog(null, "Number not found!");
