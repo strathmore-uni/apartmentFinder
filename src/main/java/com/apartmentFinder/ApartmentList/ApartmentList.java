@@ -8,10 +8,8 @@ import com.apartmentFinder.components.utils.Unit;
 import javax.swing.*;
 import java.awt.*;
 import java.util.LinkedList;
-import java.util.stream.Collectors;
 
 public class ApartmentList {
-//    NOTE - I'm still experimenting, so most of this code will look messy and unreadable and stupid
     private Container container;
     private CardLayout cardLayout;
     private JPanel mainPanel;
