@@ -1,6 +1,7 @@
 package com.apartmentFinder.LoginPage;
 
 import com.apartmentFinder.components.utils.DBConnector;
+import com.apartmentFinder.landlordDashboard.LandlordDashboard;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,8 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.util.Vector;
 
-public class LoginPage {
+public class LoginPage extends JFrame{
     private Container container;
     private CardLayout cardLayout;
     private JPanel mainPanel;
@@ -48,15 +50,21 @@ public class LoginPage {
                 DBConnector dbConnector =new DBConnector();
                 String verifyNumber=EnterPhoneNumber.getText();
                 if(dbConnector.checkUserForLogin(verifyNumber)){
-                    JOptionPane.showMessageDialog(null, "Welcome");
-                    cardLayout.show(container,"landlordDashboardPage");
+                    JOptionPane.showMessageDialog(null, "Welcome "+dbConnector.getUserName(verifyNumber));
+//                    cardLayout.show(container,"landlordDashboardPage");
+                    LandlordDashboard LD=new LandlordDashboard(verifyNumber);
+                    LD.getContentPane();
+                    LD.setVisible(true);
+                    dispose();
                 }
                 else {
-                    JOptionPane.showMessageDialog(null, "Incorrect Number");
+                    JOptionPane.showMessageDialog(null, "Number not found!");
                 }
             }
         });
     }
+
+
 
     public JPanel createMainPanel(){
         return mainPanel;
