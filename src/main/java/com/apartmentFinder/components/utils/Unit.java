@@ -6,8 +6,8 @@ public class Unit {
     private String bedrooms;
     private String bathrooms;
     private String sqft;
-    private String unitId;
-    private String apartmentId;
+    private int unitId;
+    private int apartmentId;
     private String price;
 
     public Unit(String locationDescription, String bedrooms, String bathrooms, String sqft, String unitId, String apartmentId, String price) {
@@ -15,8 +15,8 @@ public class Unit {
         this.bedrooms = bedrooms;
         this.bathrooms = bathrooms;
         this.sqft = sqft;
-        this.unitId = unitId;
-        this.apartmentId = apartmentId;
+        this.unitId = Integer.parseInt(unitId);
+        this.apartmentId = Integer.parseInt(apartmentId);
         this.price = price;
     }
 
@@ -52,19 +52,19 @@ public class Unit {
         this.sqft = sqft;
     }
 
-    public String getUnitId() {
+    public int getUnitId() {
         return unitId;
     }
 
-    public void setUnitId(String unitId) {
+    public void setUnitId(int unitId) {
         this.unitId = unitId;
     }
 
-    public String getApartmentId() {
+    public int getApartmentId() {
         return apartmentId;
     }
 
-    public void setApartmentId(String apartmentId) {
+    public void setApartmentId(int apartmentId) {
         this.apartmentId = apartmentId;
     }
 
