@@ -19,6 +19,7 @@ public class ApartmentList {
     private JPanel apartmentListContainer;
     private JPanel apartmentCards;
     private JButton filterButton;
+    private JLabel subtitle;
     private String location_value;
     private String min_price;
     private String max_price;
@@ -32,7 +33,10 @@ public class ApartmentList {
 
         fetchSearchData(searchData);
 
-
+        // Set the number of apartments found on Title
+        if(apartmentList.size() > 0) {
+            subtitle.setText(apartmentList.size() + " apartment(s) found.");
+        }
         // Set action listeners
         setActionListeners();
     }
@@ -56,8 +60,6 @@ public class ApartmentList {
         this.apartmentList = dbConnector.fetchFilteredApartments(location_value, min_price, max_price);
 
         refreshApartmentCards();
-
-        System.out.println(apartmentList);
 
         // Show the updated apartment list page
         cardLayout.show(container, "apartmentListPage");
@@ -83,6 +85,16 @@ public class ApartmentList {
 
                 apartmentCards.add(card.getMainPanel());
             }
+        }
+
+        // apartmentList is empty
+        if(apartmentList == null || apartmentList.isEmpty()) {
+            JLabel noApartmentsLabel = new JLabel("No apartments found. Adjust your filters and try again.");
+            // Center the text
+            noApartmentsLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            // Make the text bold and white
+            noApartmentsLabel.setForeground(Color.WHITE);
+            apartmentCards.add(noApartmentsLabel);
         }
 
         // Revalidate and repaint the panel to reflect the changes
