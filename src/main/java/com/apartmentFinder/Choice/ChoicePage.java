@@ -74,6 +74,34 @@ public class ChoicePage{
     }
 
     public void handleSearchForApartment() {
+        //Check if location is empty
+        if(location_value == null || location_value.isEmpty()){
+            showMessage(container,"Please enter a location to search for an apartment","Error",0);
+            return;
+        }
+
+        // Check if min price is greater than max price
+        if(min_price_combo_box.getSelectedIndex() > max_price_combo_box.getSelectedIndex()){
+            showMessage(container,"Minimum price cannot be greater than maximum price","Error",0);
+            return;
+        }
+
+        // Check if min price is equal to max price and they are integers
+        if(min_price_combo_box.getSelectedIndex() == max_price_combo_box.getSelectedIndex()){
+            showMessage(container,"Minimum price cannot be equal to maximum price","Error",0);
+            return;
+        }
+
+        if(min_price_combo_box.getSelectedIndex() == 0){
+            showMessage(container,"Please select a minimum price","Error",0);
+            return;
+        }
+
+        if(max_price_combo_box.getSelectedIndex() == 0){
+            showMessage(container,"Please select a maximum price","Error",0);
+            return;
+        }
+
         // Get input values from combo boxes
         String min_price = (String) min_price_combo_box.getSelectedItem();
         String max_price = (String) max_price_combo_box.getSelectedItem();
@@ -87,10 +115,11 @@ public class ChoicePage{
         SearchData searchData = new SearchData(location_value, min_price, max_price);
 
         // Pass the data to the apartmentListPage
-        ApartmentList apartmentListPage = new ApartmentList(container,cardLayout);
-        apartmentListPage.fetchAndFilterFromTheDB(location_value,min_price,max_price);
+        // 2. Apartment List Page
+        ApartmentList apartmentListPage = new ApartmentList(container,cardLayout,searchData);
+        container.add("apartmentListPage",apartmentListPage.createMainPanel());
 
-//        cardLayout.show(container,"apartmentListPage");
+        cardLayout.show(container,"apartmentListPage");
     }
 
     public void handleAddApartmentAction(){

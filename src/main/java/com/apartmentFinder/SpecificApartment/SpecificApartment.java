@@ -53,8 +53,10 @@ public class SpecificApartment {
         this.unitID = unitID;
 
         //Set text - This was meant to show you that the apartment ID and unit ID are being passed to this class when you click the 'View' button, you can remove it.
-        apartmentID.setText("Apartment ID: "+apartmentId);
-        unitID_label.setText("Unit ID: "+unitID);
+//        apartmentID.setText("Apartment ID: "+apartmentId);
+//        unitID_label.setText("Unit ID: "+unitID);
+        System.out.println("Apartment ID: "+apartmentId);
+        System.out.println("Unit ID: "+unitID);
     }
 
     // Fetch the unit details from the database
