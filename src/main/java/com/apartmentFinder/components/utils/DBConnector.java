@@ -8,6 +8,8 @@ import java.sql.*;
 import java.util.LinkedList;
 import java.util.Vector;
 
+import static com.apartmentFinder.components.utils.apartmentFinderDialog.showMessage;
+
 public class DBConnector {
     static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     static final String DATABASE_URL = "jdbc:mysql://localhost/apartmentFinder";
@@ -35,7 +37,7 @@ public class DBConnector {
             // -> Superior for production purposes : Log("FATAL", "Exception on class not found : " + exception.getMessage(), exception, DBConnector.class.getName());
             System.out.println("FATAL. Class Not Found Exception : "+exception.getMessage());
         } catch (SQLException exception) {
-            // Log("FATAL", "SQL Exception : " + exception.getMessage(), exception, DBConnector.class.getName());
+            // Log("FATAL", "SQL Exception : " + exception.getMessage(), exception, DBConnector.class.getName());]
             System.out.println("FATAL. SQL Exception : "+exception.getMessage());
         }
     }
@@ -80,6 +82,46 @@ public class DBConnector {
         }
 
         return apartmentsList;
+    }
+
+    // 2. Fetch specific apartment
+    public LinkedList<Unit> fetchSpecificApartment(int apartmentId, int unitID) {
+        LinkedList<Unit> unit = new LinkedList<>();
+        try {
+            String query = "SELECT l.description AS location_description, u.bedrooms AS bedrooms, u.bathrooms AS bathrooms, u.sqft AS sqft, u.id AS unit_id, a.id AS apartment_id, \n" +
+                    "  u.price\n" +
+                    "FROM locations AS l\n" +
+                    "INNER JOIN apartments AS a ON l.id = a.location_id\n" +
+                    "INNER JOIN units AS u ON a.id = u.apartment_id\n" +
+                    "WHERE a.id = ? AND u.id = ?\n" +
+                    "GROUP BY l.description, a.id, u.price;";
+            PreparedStatement preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setInt(1, apartmentId);
+            preparedStatement.setInt(2, unitID);
+
+            ResultSet result = preparedStatement.executeQuery();
+
+            while (result.next()) {
+                String locationDescription = result.getString("location_description");
+                String bedrooms = result.getString("bedrooms");
+                String bathrooms = result.getString("bathrooms");
+                String sqft = result.getString("sqft");
+                String unitId = result.getString("unit_id");
+                String apartmentID = result.getString("apartment_id");
+                String price = result.getString("price");
+
+                // Create a Unit object to store the data
+                Unit unitData = new Unit(locationDescription, bedrooms, bathrooms, sqft, unitId, apartmentID, price);
+
+                // Add the Unit object to the LinkedList
+                unit.add(unitData);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error fetching specific apartment: " + e.getMessage());
+        }
+
+        return unit;
     }
     public boolean checkUserForLogin(String number){
         boolean exists = false;

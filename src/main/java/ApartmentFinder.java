@@ -43,7 +43,7 @@ public class ApartmentFinder extends JFrame  {
         //cardLayout.show(container,"templatePage");
         setContentPane(container);
 
-        setSize(1400,600);
+        setSize(1400,800);
         // Set the image in the middle of the screen
         Dimension dim=Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
