@@ -1,7 +1,12 @@
 package com.apartmentFinder.components.utils;
 
+import com.apartmentFinder.LoginPage.LoginPage;
+import com.apartmentFinder.landlordDashboard.LandlordDashboard;
+
+import java.awt.*;
 import java.sql.*;
 import java.util.LinkedList;
+import java.util.Vector;
 
 public class DBConnector {
     static final String DRIVER = "com.mysql.cj.jdbc.Driver";
@@ -76,7 +81,6 @@ public class DBConnector {
 
         return apartmentsList;
     }
-    public String userName;
     public boolean checkUserForLogin(String number){
         boolean exists = false;
         try {
@@ -92,5 +96,57 @@ public class DBConnector {
             e.printStackTrace();
         }
         return exists;
+    }
+
+    public String getUserName(String number){
+        String name = null;
+        try {
+            String query = "SELECT name FROM landlords WHERE phone = ?";
+            PreparedStatement preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1, number);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()){
+            name = resultSet.getString("name");
+        }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return name;
+    }
+
+    public LandlordDashboardData fetchLandlordDashboardData(String number){
+        LandlordDashboardData landlordDashboardData=null;
+        try{
+            String query="SELECT * FROM landlordsdashboard WHERE phone = ?";
+            PreparedStatement preparedStatement=conn.prepareStatement(query);
+            preparedStatement.setString(1,number);
+            ResultSet resultSet=preparedStatement.executeQuery();
+            while (resultSet.next()){
+                String Lname=resultSet.getString("name");
+                String Lapartmentid=resultSet.getString("apartment id");
+                String Lapartmentname=resultSet.getString("apartmentname");
+                String Lprice=resultSet.getString("price");
+                String Lbedrooms=resultSet.getString("bedrooms");
+                String Lbathrooms=resultSet.getString("bathrooms");
+                String Lsqft=resultSet.getString("sqft");
+                String Lphone=resultSet.getString("phone");
+                landlordDashboardData=new LandlordDashboardData(Lname,Lapartmentid,Lapartmentname,Lprice,Lbedrooms,Lbathrooms,Lsqft,Lphone);
+            }
+            System.out.println("Obtained "+number+" Data");
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return landlordDashboardData;
+    }
+    public void DeleteDashboardData(String landlordID){
+        try{
+            String query="DELETE FROM landlordsdashboard WHERE apartment id=?";
+            PreparedStatement preparedStatement=conn.prepareStatement(query);
+            preparedStatement.setInt(1, Integer.parseInt(landlordID));
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

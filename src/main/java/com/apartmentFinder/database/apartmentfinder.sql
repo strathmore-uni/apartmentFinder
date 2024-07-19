@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2024 at 04:28 PM
+-- Generation Time: Jul 19, 2024 at 06:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -65,6 +65,32 @@ INSERT INTO `landlords` (`id`, `name`, `phone`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `landlordsdashboard`
+--
+
+CREATE TABLE `landlordsdashboard` (
+  `id` int(11) NOT NULL,
+  `apartment_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `apartmentname` varchar(999) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `bedrooms` int(11) DEFAULT NULL,
+  `bathrooms` int(11) DEFAULT NULL,
+  `sqft` int(11) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `landlordsdashboard`
+--
+
+INSERT INTO `landlordsdashboard` (`id`, `apartment_id`, `name`, `apartmentname`, `price`, `bedrooms`, `bathrooms`, `sqft`, `phone`) VALUES
+(1, 1, 'John Doe', 'Hilltop Heights', 1200.00, 3, 2, 1500, '0712345678'),
+(2, 2, 'Jane Smith', 'Grove Apartments', 950.00, 2, 1, 900, '0787654321');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `locations`
 --
 
@@ -90,6 +116,7 @@ INSERT INTO `locations` (`id`, `description`) VALUES
 CREATE TABLE `units` (
   `id` int(11) NOT NULL,
   `apartment_id` int(11) DEFAULT NULL,
+  `apartmentname` varchar(999) NOT NULL,
   `price` decimal(10,2) DEFAULT NULL,
   `bedrooms` int(11) DEFAULT NULL,
   `bathrooms` int(11) DEFAULT NULL,
@@ -100,9 +127,9 @@ CREATE TABLE `units` (
 -- Dumping data for table `units`
 --
 
-INSERT INTO `units` (`id`, `apartment_id`, `price`, `bedrooms`, `bathrooms`, `sqft`) VALUES
-(1, 1, 1200.00, 3, 2, 1500),
-(2, 2, 950.00, 2, 1, 900);
+INSERT INTO `units` (`id`, `apartment_id`, `apartmentname`, `price`, `bedrooms`, `bathrooms`, `sqft`) VALUES
+(1, 1, 'Hilltop Heights', 1200.00, 3, 2, 1500),
+(2, 2, 'Grove Apartments', 950.00, 2, 1, 900);
 
 --
 -- Indexes for dumped tables
@@ -121,6 +148,13 @@ ALTER TABLE `apartments`
 --
 ALTER TABLE `landlords`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `landlordsdashboard`
+--
+ALTER TABLE `landlordsdashboard`
+  ADD PRIMARY KEY (`apartment_id`),
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `locations`

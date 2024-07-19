@@ -82,7 +82,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="a24a8" class="javax.swing.JLabel">
+              <component id="a24a8" class="javax.swing.JLabel" binding="welcomeText">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -90,7 +90,7 @@
                   <background color="-8224126"/>
                   <font name="Inter" size="24" style="0"/>
                   <foreground color="-8224126"/>
-                  <text value="Welcome Freddie."/>
+                  <text value=""/>
                 </properties>
               </component>
             </children>
@@ -283,7 +283,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="f97ac" class="javax.swing.JButton" binding="button2" default-binding="true">
+                  <component id="f97ac" class="javax.swing.JButton" binding="deleteButton">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <minimum-size width="40" height="40"/>
@@ -326,7 +326,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="9f519" class="javax.swing.JLabel">
+                  <component id="9f519" class="javax.swing.JLabel" binding="contact">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -380,7 +380,7 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="5b70f" class="javax.swing.JLabel">
+                  <component id="5b70f" class="javax.swing.JLabel" binding="propertyName">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
