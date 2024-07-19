@@ -31,7 +31,10 @@ public class ApartmentCardJava implements ActionListener {
     private int apartmentID;
     private int unitID;
 
-    public ApartmentCardJava(Container container, CardLayout cardLayout) {
+    public ApartmentCardJava(Container container, CardLayout cardLayout, int apartmentID, int unitID) {
+        this.apartmentID = apartmentID;
+        this.unitID = unitID;
+
         this.cardLayout = cardLayout;
         this.container = container;
         // Main Panel
