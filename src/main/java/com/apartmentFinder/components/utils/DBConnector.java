@@ -123,7 +123,7 @@ public class DBConnector {
             ResultSet resultSet=preparedStatement.executeQuery();
             while (resultSet.next()){
                 String Lname=resultSet.getString("name");
-                String Lapartmentid=resultSet.getString("apartment id");
+                String Lapartmentid=resultSet.getString("apartment_id");
                 String Lapartmentname=resultSet.getString("apartmentname");
                 String Lprice=resultSet.getString("price");
                 String Lbedrooms=resultSet.getString("bedrooms");
@@ -140,13 +140,31 @@ public class DBConnector {
     }
     public void DeleteDashboardData(String landlordID){
         try{
-            String query="DELETE FROM landlordsdashboard WHERE apartment id=?";
+            String query="DELETE FROM landlordsdashboard WHERE apartment_id=?";
             PreparedStatement preparedStatement=conn.prepareStatement(query);
             preparedStatement.setInt(1, Integer.parseInt(landlordID));
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+    public void UpdateDashboardData(String aptname,double price,int  bedroom,int bathrooms, int sqft,int aptid){
+        try{
+            String updateQuery="UPDATE landlordsdashboard SET apartmentname=?, price=?, bedrooms=?,bathrooms=?,sqft=? WHERE apartment_id=?";
+            PreparedStatement preparedStatement=conn.prepareStatement(updateQuery);
+            preparedStatement.setString(1,aptname);
+            preparedStatement.setDouble(2,price);
+            preparedStatement.setInt(3,bedroom);
+            preparedStatement.setInt(4,bathrooms);
+            preparedStatement.setInt(5,sqft);
+            preparedStatement.setInt(6,aptid);
+
+            preparedStatement.executeUpdate();
+            System.out.println("Updated dashboard");
+            preparedStatement.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 }
