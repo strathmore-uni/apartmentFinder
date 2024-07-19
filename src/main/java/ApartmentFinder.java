@@ -38,7 +38,7 @@ public class ApartmentFinder extends JFrame  {
         container.add("templatePage",template.getMainPanel());
         // Set the first page to display - choicePage
 
-        cardLayout.show(container,"loginPage");
+        cardLayout.show(container,"choicePage");
         // Template Page - Uncomment to see the template page
         //cardLayout.show(container,"templatePage");
         setContentPane(container);

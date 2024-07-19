@@ -20,7 +20,6 @@ public class ApartmentList {
     private JPanel apartmentCards;
     private JButton filterButton;
     private JLabel subtitle;
-    private JButton addApartmentButton;
     private String location_value;
     private String min_price;
     private String max_price;
@@ -49,10 +48,6 @@ public class ApartmentList {
             cardLayout.show(container, "choicePage");
         });
 
-        addApartmentButton.addActionListener(e -> {
-            // Pop apartmentListPage from the stack
-            cardLayout.show(container, "addApartmentPage");
-        });
     }
 
     // Fetch data from the database with filters
