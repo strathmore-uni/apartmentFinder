@@ -150,6 +150,7 @@ public class DBConnector {
         }
     }
     public void UpdateDashboardData(String aptname,double price,int  bedroom,int bathrooms, int sqft,int aptid){
+
         try{
             String updateQuery="UPDATE landlordsdashboard SET apartmentname=?, price=?, bedrooms=?,bathrooms=?,sqft=? WHERE apartment_id=?";
             PreparedStatement preparedStatement=conn.prepareStatement(updateQuery);
