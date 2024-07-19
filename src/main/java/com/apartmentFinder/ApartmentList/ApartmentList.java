@@ -9,6 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.LinkedList;
 
+import static com.apartmentFinder.components.utils.apartmentFinderDialog.showMessage;
+
 public class ApartmentList {
     private Container container;
     private CardLayout cardLayout;
@@ -18,6 +20,7 @@ public class ApartmentList {
     private JPanel apartmentCards;
     private JButton filterButton;
     private JLabel subtitle;
+    private JButton addApartmentButton;
     private String location_value;
     private String min_price;
     private String max_price;
@@ -45,6 +48,11 @@ public class ApartmentList {
             // Pop apartmentListPage from the stack
             cardLayout.show(container, "choicePage");
         });
+
+        addApartmentButton.addActionListener(e -> {
+            // Pop apartmentListPage from the stack
+            cardLayout.show(container, "addApartmentPage");
+        });
     }
 
     // Fetch data from the database with filters
@@ -55,8 +63,13 @@ public class ApartmentList {
 
         // Fetch data with filters from the database
         DBConnector dbConnector = new DBConnector();
-        this.apartmentList = dbConnector.fetchFilteredApartments(location_value, min_price, max_price);
-
+        try {
+            this.apartmentList = dbConnector.fetchFilteredApartments(location_value, min_price, max_price);
+        } catch (Exception e) {
+            showMessage(container,"Make sure the database is set up correctly then try again", "Error", JOptionPane.ERROR_MESSAGE);
+            //Devmode
+            //e.printStackTrace();
+        }
         refreshApartmentCards();
 
         // Show the updated apartment list page

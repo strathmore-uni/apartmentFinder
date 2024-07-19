@@ -1,5 +1,6 @@
 package com.apartmentFinder.SpecificApartment;
 
+import com.apartmentFinder.components.utils.DBConnector;
 import com.apartmentFinder.components.utils.Unit;
 
 import javax.swing.*;
@@ -38,8 +39,8 @@ public class SpecificApartment {
     private JLabel MoreDetails;
     private JTextArea ReviewText;
     private JTextArea DescriptionText;
-    private JLabel label1;
-    private JLabel poolLabel;
+    private JLabel pageTitle;
+    private JButton backToApartmentList;
     private JLabel apartmentID;
     private int apartmentId;
     private int unitID;
@@ -52,18 +53,26 @@ public class SpecificApartment {
         this.apartmentId = apartmentId;
         this.unitID = unitID;
 
-        //Set text - This was meant to show you that the apartment ID and unit ID are being passed to this class when you click the 'View' button, you can remove it.
-//        apartmentID.setText("Apartment ID: "+apartmentId);
-//        unitID_label.setText("Unit ID: "+unitID);
-        System.out.println("Apartment ID: "+apartmentId);
-        System.out.println("Unit ID: "+unitID);
+        // Fetch the unit details from the database
+        fetchUnitDetails(apartmentId, unitID);
+
+        // Action Listeners
+        backToApartmentList.addActionListener(e->{
+            cardLayout.show(container, "apartmentListPage");
+        });
     }
 
     // Fetch the unit details from the database
     public LinkedList<Unit> fetchUnitDetails(int apartmentId, int unitID){
-        // Fetch the unit details from the database
-        // E.g Fetch Unit where apartment ID is apartmentID and Unit ID is unitID then assign it to the `unit` variable
-        // This is just a suggestion though
+        DBConnector dbConnector = new DBConnector();
+        unit = dbConnector.fetchSpecificApartment(apartmentId, unitID);
+
+        //Set the fetched data to the UI components
+        if(unit.size() > 0){
+            Unit unitData = unit.get(0);
+            pageTitle.setText(unitData.getLocationDescription());
+            DescriptionText.setText("This is a "+unitData.getBedrooms()+"-bedroomed apartment with "+unitData.getBathrooms()+" bathroom(s).");
+        }
         return unit;
     }
     public JPanel createMainPanel(){

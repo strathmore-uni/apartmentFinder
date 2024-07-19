@@ -81,14 +81,9 @@ public class ChoicePage{
         }
 
         // Check if min price is greater than max price
+
         if(min_price_combo_box.getSelectedIndex() > max_price_combo_box.getSelectedIndex()){
             showMessage(container,"Minimum price cannot be greater than maximum price","Error",0);
-            return;
-        }
-
-        // Check if min price is equal to max price and they are integers
-        if(min_price_combo_box.getSelectedIndex() == max_price_combo_box.getSelectedIndex()){
-            showMessage(container,"Minimum price cannot be equal to maximum price","Error",0);
             return;
         }
 
